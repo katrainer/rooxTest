@@ -1,6 +1,6 @@
-import {FC, memo} from 'react';
+import {FC} from 'react';
 import s from './User.module.scss'
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 type UserPropsType = {
     id: number
@@ -9,30 +9,30 @@ type UserPropsType = {
     companyName: string
 }
 
-export const User: FC<UserPropsType> = memo(
-    (props) => {
-        const userInfo = [props]
+export const User: FC<UserPropsType> =
+    ({
+         id,
+         userName,
+         city,
+         companyName
+     }) => {
         return <div className={s.mainContainer}>
-            {
-                userInfo.map(u => <div key={u.id} className={s.contentContainer}>
-                    <div className={s.infoContainer}>
-                        <p>
-                            <span className={s.headline}>ФИО:</span>
-                            <span>{u.userName}</span>
-                        </p>
-                        <p>
-                            <span className={s.headline}>город:</span>
-                            <span>{u.city}</span>
-                        </p>
-                        <p>
-                            <span className={s.headline}>компания:</span>
-                            <span>{u.companyName}</span>
-                        </p>
-                    </div>
-                    <div className={s.link}>
-                        <NavLink to={`/user/${u.id}`}>Подробнее</NavLink>
-                    </div>
-                </div>)}
-
+            <div className={s.infoContainer}>
+                <p>
+                    <span className={s.headline}>ФИО:</span>
+                    <span>{userName}</span>
+                </p>
+                <p>
+                    <span className={s.headline}>город:</span>
+                    <span>{city}</span>
+                </p>
+                <p>
+                    <span className={s.headline}>компания:</span>
+                    <span>{companyName}</span>
+                </p>
+            </div>
+            <div className={s.link}>
+                <Link to={`/users/${id}`}>Подробнее</Link>
+            </div>
         </div>
-    })
+    }

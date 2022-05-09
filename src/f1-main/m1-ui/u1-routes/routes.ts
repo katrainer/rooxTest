@@ -1,3 +1,4 @@
-export const routes ={
-    users: '/users'
+export const routes = {
+    users: '/users',
+    userSettings: '/users/:id',
 }

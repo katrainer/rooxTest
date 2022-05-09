@@ -1,0 +1,45 @@
+.mainContainer {
+  margin-top: 11px;
+  width: 438px;
+
+  .contentContainer {
+    background: #FFFFFF;
+    border: 1px solid #F3F3F3;
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-left: 12px;
+    padding-bottom: 19px;
+
+    > div {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 8px;
+        line-height: 9px;
+        margin-bottom: 3px;
+      }
+
+      input {
+        padding: 5px 0px;
+        padding-left: 10px;
+        width: 199px;
+        height: 10px;
+        border: 1px solid #D8D8D8;
+        border-radius: 5px;
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+
+    .comment {
+      height: 53px;
+      width: 408px;
+    }
+  }
+  .buttonContainer{
+    display: flex;
+    justify-content: end;
+  }
+}

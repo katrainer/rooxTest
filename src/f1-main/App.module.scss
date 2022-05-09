@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  background: #FFFFFF;
+  background: #E5E5E5;
+
+  .contentContainer {
+    padding: 19px 62px 25px 34px;
+    width: 417px;
+    background-color: white;
+  }
 }
 
-.contentContainer{
-  padding: 19px 62px 25px 34px;
-  width: 417px;
-}

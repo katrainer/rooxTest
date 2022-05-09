@@ -8,37 +8,32 @@
   margin-bottom: 10px;
   padding: 10px;
 
-  .contentContainer {
+  .infoContainer {
+    width: 50%;
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
 
-    .infoContainer {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-      & > p {
-        margin: 0;
-      }
-
-      .headline {
-        color: #A3A3A3;
-        margin-right: 7px;
-      }
+    & > p {
+      margin: 0;
     }
 
-    .link {
-      width: 50%;
-      display: flex;
-      justify-content: end;
-      align-items: end;
+    .headline {
+      color: #A3A3A3;
+      margin-right: 7px;
+    }
+  }
 
-      & a {
-        text-decoration: none;
-        line-height: 14px;
-        color: #4B51EF;
-      }
+  .link {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    & a {
+      text-decoration: none;
+      line-height: 14px;
+      color: #4B51EF;
     }
   }
 }

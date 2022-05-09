@@ -9,15 +9,18 @@ const rootReducer = combineReducers({
 })
 export const store = createStore(rootReducer, applyMiddleware(thunk))
 
+//Типизация стора
+export type AppRootStateType = ReturnType<typeof rootReducer>
+
+//Типизация санок
 export type AppActionType = UsersReducerActionType
 export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, AppRootStateType, unknown, AppActionType>
+
+//Свой диспатч и селектор
 export const useAppSelector: TypedUseSelectorHook<AppRootStateType> = useSelector
 export const useAppDispatch = () => {
     return useDispatch() as ThunkDispatch<AppRootStateType, unknown, AppActionType>
 }
-
-//Типизация стора
-export type AppRootStateType = ReturnType<typeof rootReducer>
 
 //@ts-ignore
 window.store = store
