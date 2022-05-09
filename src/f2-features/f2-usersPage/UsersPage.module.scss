@@ -1,0 +1,14 @@
+.mainContainer {
+  width: 100%;
+
+  .usersContainer {
+  width: 100%;
+  }
+
+  .countUsersContainer {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    line-height: 14px;
+  }
+}

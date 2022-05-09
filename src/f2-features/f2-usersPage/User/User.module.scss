@@ -1,0 +1,44 @@
+.mainContainer {
+  height: 53px;
+  width: 400px;
+  background: #F3F3F3;
+  border-radius: 8px;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  .contentContainer {
+    display: flex;
+    width: 100%;
+
+    .infoContainer {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      & > p {
+        margin: 0;
+      }
+
+      .headline {
+        color: #A3A3A3;
+        margin-right: 7px;
+      }
+    }
+
+    .link {
+      width: 50%;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+
+      & a {
+        text-decoration: none;
+        line-height: 14px;
+        color: #4B51EF;
+      }
+    }
+  }
+}
