@@ -19,7 +19,7 @@ export const Navbar = () => {
     }
 
     return <div className={s.mainContainer}>
-        <span>Сортировка</span>
+        <span className={s.title}>Сортировка</span>
         <MyButton onClick={sortCityHandler}>по городу</MyButton>
         <MyButton onClick={sortCompanyHandler}>по компании</MyButton>
     </div>
