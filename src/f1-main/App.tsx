@@ -15,8 +15,8 @@ export const App = () => {
     useEffect(() => {
         dispatch(setUsersTC())
     }, [])
+    if (!isInitialized) return <Preloader/>
     return <div className={s.mainContainer}>
-        {!isInitialized && <Preloader/>}
         <Navbar/>
         <div className={s.contentContainer}><Routes>
             <Route path={'/'} element={<Navigate to={routes.users}/>}></Route>

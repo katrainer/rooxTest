@@ -15,6 +15,7 @@ export const SettingsOff: FC<SettingsPropsType> =
                 {userSettings.map(u => <div key={u.formikName}>
                     <span>{u.title}</span>
                     <input
+                        disabled
                         id={u.formikName}
                         type={u.inputType}
                         placeholder={u.data}
@@ -22,11 +23,7 @@ export const SettingsOff: FC<SettingsPropsType> =
                 </div>)}
                 <div>
                     <span>Comment</span>
-                    <input
-                        className={s.comment}
-                        id="comment"
-                        type={'text'}
-                    />
+                    <textarea disabled id="comment"/>
                 </div>
             </div>
             <div className={s.buttonContainer}>

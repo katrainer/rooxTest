@@ -22,23 +22,32 @@
       }
 
       input {
-        padding: 5px 0px;
-        padding-left: 10px;
+        padding: 5px 0 5px 10px;
         width: 199px;
         height: 10px;
         border: 1px solid #D8D8D8;
         border-radius: 5px;
-        font-size: 10px;
+        font: 400 10px 'Roboto';
         line-height: 12px;
+        font-style: normal;
       }
     }
 
-    .comment {
-      height: 53px;
-      width: 408px;
+    textarea {
+      height: 43px;
+      width: 406px;
+      border: 1px solid #D8D8D8;
+      border-radius: 5px;
+      line-height: 12px;
+      resize: none;
+      font: 400 10px 'Roboto';
+      font-style: normal;
+      line-height: 12px;
+      padding: 5px 0 5px 10px;
     }
   }
-  .buttonContainer{
+
+  .buttonContainer {
     display: flex;
     justify-content: end;
   }

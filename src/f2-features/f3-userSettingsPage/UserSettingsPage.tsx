@@ -22,13 +22,8 @@ export const UserSettingsPage = () => {
     const param = useParams<'id'>()
 
     const users = useAppSelector<UserType[]>(state => state.users.users)
-    const user: UserType = {
-        ...users.filter(u => {
-            if (param.id) {
-                return u.id === Number(param.id)
-            }
-        })[0]
-    }
+    const user: UserType = users.find(u => u.id === Number(param?.id))!
+
 
     const userSettings: UserSettingsType[] = [
         {formikName: 'name', title: 'Name', inputType: 'text', data: user.name,},
